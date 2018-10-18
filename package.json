@@ -1,6 +1,6 @@
 {
-  "name": "react-apexcharts",
-  "version": "1.0.9",
+  "name": "react-apexcharts-dbc",
+  "version": "0.1.0",
   "description": "React.js wrapper for ApexCharts",
   "main": "dist/react-apexcharts.min.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "prop-types": "^15.5.7"
   },
   "peerDependencies": {
-    "apexcharts": "^2.0.9",
+    "apexcharts-dbc": "^2.0.9",
     "react": ">=0.13"
   },
   "devDependencies": {
