@@ -1,6 +1,6 @@
-import ApexCharts from 'apexcharts-dbc';
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import ApexCharts from "apexcharts-dbc";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export default class Charts extends Component {
   constructor(props) {
@@ -8,17 +8,15 @@ export default class Charts extends Component {
     if (React.createRef) {
       this.chartRef = React.createRef();
     } else {
-      this.setRef = el => this.chartRef = el;
+      this.setRef = el => (this.chartRef = el);
     }
-    this.chart = null
+    this.chart = null;
   }
 
   render() {
     const { type, width, height, series, options, ...props } = this.props;
-    return React.createElement('div', {
-      ref: React.createRef
-        ? this.chartRef
-        : this.setRef,
+    return React.createElement("div", {
+      ref: React.createRef ? this.chartRef : this.setRef,
       ...props
     });
   }
@@ -46,17 +44,16 @@ export default class Charts extends Component {
   componentDidUpdate(prevProps) {
     if (!this.chart) return null;
     const { options, series } = this.props;
-    const prevOptions = JSON.stringify(prevProps.options)
-    const prevSeries = JSON.stringify(prevProps.series)
-    const currentOptions = JSON.stringify(options)
-    const currentSeries = JSON.stringify(series)
+    const prevOptions = JSON.stringify(prevProps.options);
+    const prevSeries = JSON.stringify(prevProps.series);
+    const currentOptions = JSON.stringify(options);
+    const currentSeries = JSON.stringify(series);
 
     if (prevOptions !== currentOptions || prevSeries !== currentSeries) {
       if (prevSeries === currentSeries) {
         // series is not changed,but options are changed
         this.chart.updateOptions(this.getConfig());
-      }
-      else if (prevOptions === currentOptions) {
+      } else if (prevOptions === currentOptions) {
         // options are not changed, just the series is changed
         this.chart.updateSeries(series);
       } else {
@@ -67,7 +64,8 @@ export default class Charts extends Component {
   }
 
   componentWillUnmount() {
-    if (this.chart && typeof this.chart.destroy === 'function') this.chart.destroy();
+    if (this.chart && typeof this.chart.destroy === "function")
+      this.chart.destroy();
   }
 }
 
@@ -80,7 +78,7 @@ Charts.propTypes = {
 };
 
 Charts.defaultProps = {
-  type: 'line',
-  width: '100%',
-  height: 'auto'
+  type: "line",
+  width: "100%",
+  height: "auto"
 };
