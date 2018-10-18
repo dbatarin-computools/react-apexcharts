@@ -5511,9 +5511,9 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-apexcharts-dbc@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/react-apexcharts-dbc/-/react-apexcharts-dbc-0.1.0.tgz#5dc34db90d8bb218bac6d068759cb0f0f5b0241b"
+react-apexcharts-dbc@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-apexcharts-dbc/-/react-apexcharts-dbc-0.1.1.tgz#564857e619a32804c4ca46be910672854030e1ad"
   dependencies:
     prop-types "^15.5.7"
 

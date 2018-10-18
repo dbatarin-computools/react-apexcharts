@@ -15,6 +15,9 @@ class Line extends Component {
         },
         xaxis: {
           categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        },
+        yaxis: {
+          bothSide: true
         }
       },
       series: [
